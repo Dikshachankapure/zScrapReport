@@ -1,0 +1,21 @@
+{
+	"PlantData": [{
+		"Name1": "Plant 1",
+		"Werks":"101"
+    },{
+    	"Name1": "Plant 2",
+		"Werks":"102"
+    },{
+    	"Name1": "Plant 3",
+		"Werks":"103"
+    },
+    {
+    	"Name1": "Plant 4",
+		"Werks":"104"
+    },
+    {
+    	"Name1": "Plant 5",
+		"Werks":"105"
+    }]
+    
+ }

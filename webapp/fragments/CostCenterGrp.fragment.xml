@@ -1,0 +1,21 @@
+<core:FragmentDefinition
+		xmlns="sap.m"
+		xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="CCGPopup"
+		noDataText="{i18n>notfound}"
+		title="{i18n>selectccg}"
+		search="fnhandleSearchccg"
+		confirm="fnCloseDialogccg"
+		cancel="fnCloseDialogccg"
+		items="{
+			path: 'CCGModel>/CCGData'
+		}" >
+		<StandardListItem
+			title="{CCGModel>Description}"
+			description="{CCGModel>CostCentreGrp}"
+			iconDensityAware="false"
+			iconInset="false"
+			type="Active" />
+	</SelectDialog>
+</core:FragmentDefinition>

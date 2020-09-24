@@ -1,0 +1,26 @@
+{
+	"CCGData": [{
+		"CostCentreGrp": "201",
+		"PlantID":"101",
+		"Description":"Cost Center Group 1"
+    },{
+    	"CostCentreGrp": "202",
+    	"PlantID":"102",
+		"Description":"Cost Center Group 2"
+    },{
+    	"CostCentreGrp": "203",
+    	"PlantID":"103",
+		"Description":"Cost Center Group 3"
+    },
+    {
+    	"CostCentreGrp": "204",
+    	"PlantID":"101",
+		"Description":"Cost Center Group 4"
+    },
+    {
+    	"CostCentreGrp": "205",
+    	"PlantID":"102",
+		"Description":"Cost Center Group 5"
+    }]
+    
+ }

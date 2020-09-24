@@ -1,0 +1,33 @@
+{
+	"ScrapData": [{
+		"CostCentreText": "Cost Center 1",
+		"ScrapAmnt":"1000"
+    },{
+    	"CostCentreText": "Cost Center 2",
+		"ScrapAmnt":"2000"
+    },{
+    	"CostCentreText": "Cost Center 3",
+		"ScrapAmnt":"3000"
+    },
+    {
+    	"CostCentreText": "Cost Center 4",
+		"ScrapAmnt":"5000"
+    },
+    {
+    	"CostCentreText": "Cost Center 5",
+		"ScrapAmnt":"10000"
+    },
+    {
+    	"CostCentreText": "Cost Center 6",
+		"ScrapAmnt":"8000"
+    },
+    {
+    	"CostCentreText": "Cost Center 7",
+		"ScrapAmnt":"4000"
+    },
+    {
+    	"CostCentreText": "Cost Center 8",
+		"ScrapAmnt":"6000"
+    }]
+    
+ }

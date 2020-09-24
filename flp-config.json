@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "demo.zscrapreport_json.zscrapreport_json",
+        "description": "Scrap Report",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#zscrapreport_json-Display",
+        "navigationComponentName": "demo.zscrapreport_json",
+        "intentSemanticObject": "zscrapreport_json",
+        "intentAction": "Display",
+        "html5ApplicationName": "zscrapreportjson",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "46fe9fa0-afdb-4221-8712-fec85d1e8400-1555043785238"
+        ],
+        "contentPackages": [
+            "37e7742e-74da-42e1-878f-a6514a2ab3c4-1555043729371"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Scrap Report",
+        "subtitle": "Analytical",
+        "searchKeywords": "Scrap Report,Analytical",
+        "displayIconUrl": "sap-icon://column-chart-dual-axis",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

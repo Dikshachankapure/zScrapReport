@@ -1,0 +1,74 @@
+<mvc:View controllerName="demo.zscrapreport_json.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page title="Scrap Report">
+					<content>
+						<layout:FixFlex id='chartFixFlex' minFlexSize="250">
+							<layout:fixContent>
+								<Panel id='settingsPanel' class="panelStyle" expandable="true" expanded="true" headerText="Search" width="auto">
+									<content>
+										<layout:Grid defaultSpan="XL3 L3 M3 S12">
+											<layout:VerticalLayout>
+												<Label text="{i18n>plant}" required="true"/>
+												<Input id="plant" type="Text" textFormatMode="Key" placeholder="{i18n>enterplant}" showValueHelp="true" valueHelpRequest="fnPlantSearchHelp"
+													showSuggestion="true" valueHelpOnly="true" valueStateText="Enter Plant" suggestionItems="{plantModel>/PlantData}">
+													<suggestionItems>
+														<core:ListItem key="{plantModel>Werks}" text="{plantModel>Name1}"/>
+													</suggestionItems>
+												</Input>
+											</layout:VerticalLayout>
+											<layout:VerticalLayout>
+												<Label text="{i18n>ccg}" required="true"/>
+												<Input id="CCGRP" type="Text" textFormatMode="Key" placeholder="{i18n>entercost}" showValueHelp="true" showSuggestion="true"
+													valueHelpRequest="fnCCGSearchHelp" valueHelpOnly="true" valueStateText="Enter Cost Center Group" suggestionItems="{CCGModel>/CCGData}">
+													<suggestionItems>
+														<core:ListItem key="{CCGModel>CostCentreGrp}" text="{CCGModel>Description}"/>
+													</suggestionItems>
+												</Input>
+											</layout:VerticalLayout>
+											<layout:VerticalLayout>
+												<Label text="{i18n>postingdatefrom}" required="true"/>
+												<DatePicker id="dpPeriodFrom" placeholder="YYYY/MM/DD" class="sapUiSmallMarginBottom" valueFormat="yyyy/MM/dd" displayFormat="yyyy/MM/dd"
+													valueStateText="Enter Period From"/>
+											</layout:VerticalLayout>
+											<layout:VerticalLayout>
+												<Label text="{i18n>postingdateto}" required="true"/>
+												<DatePicker id="dpPeriodTo" placeholder="YYYY/MM/DD" class="sapUiSmallMarginBottom" valueFormat="yyyy/MM/dd" displayFormat="yyyy/MM/dd"
+													valueStateText="Enter Period To"/>
+											</layout:VerticalLayout>
+											<layout:VerticalLayout>
+												<Button type="Accept" press="fnSearch" icon="sap-icon://search" text="{i18n>searchbutton}"/>
+											</layout:VerticalLayout>
+										</layout:Grid>
+									</content>
+								</Panel>
+							</layout:fixContent>
+							<layout:fixContent>
+								<viz:Popover id="idPopOver"></viz:Popover>
+								<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='column'>
+									<viz:dataset>
+										<viz.data:FlattenedDataset data="{/ScrapData}">
+											<viz.data:dimensions>
+												<viz.data:DimensionDefinition name="Cost Center Text" value="{CostCentreText}"/>
+											</viz.data:dimensions>
+											<viz.data:measures>
+												<viz.data:MeasureDefinition name="Scrap Amount" value="{ScrapAmnt}"/>
+											</viz.data:measures>
+										</viz.data:FlattenedDataset>
+									</viz:dataset>
+									<viz:feeds>
+										<viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Scrap Amount"/>
+										<viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension" values="Cost Center Text"/>
+									</viz:feeds>
+								</viz:VizFrame>
+							</layout:fixContent>
+						</layout:FixFlex>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
